@@ -2,7 +2,7 @@ package basic
 
 import "errors"
 
-var NotFound = errors.New("not found")
+var ErrNotFound = errors.New("not found")
 
 func binarySearch(haystack []int, needle int) (int, error) {
 
@@ -24,5 +24,5 @@ func binarySearch(haystack []int, needle int) (int, error) {
 		}
 	}
 
-	return -1, NotFound
+	return -1, ErrNotFound
 }
